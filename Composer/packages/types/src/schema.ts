@@ -127,6 +127,7 @@ export enum SDKKinds {
   UpdateActivity = 'Microsoft.UpdateActivity',
   UrlEntityRecognizer = 'Microsoft.UrlEntityRecognizer',
   OrchestratorRecognizer = 'Microsoft.OrchestratorRecognizer',
+  BeginPowerAutomate = 'Microsoft.BeginPowerAutomate',
 }
 
 export enum SDKRoles {

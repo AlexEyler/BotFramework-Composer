@@ -48,6 +48,12 @@ const DefaultFormSchema: FormUISchema = {
     helpLink: 'https://aka.ms/bfc-understanding-dialogs',
     order: ['dialog', 'options', 'resultProperty', 'includeActivity', '*'],
   },
+  [SDKKinds.BeginPowerAutomate]: {
+    label: () => formatMessage('Trigger a power automate flow'),
+    subtitle: () => formatMessage('Trigger power automate flow'),
+    helpLink: 'https://aka.ms/bfc-understanding-dialogs',
+    order: ['flowId', 'parameters', 'resultProperty', '*'],
+  },
   [SDKKinds.OnCancelDialog]: {
     label: () => formatMessage('Dialog cancelled'),
     subtitle: () => formatMessage('Cancel dialog event'),

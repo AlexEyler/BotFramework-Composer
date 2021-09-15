@@ -23,6 +23,9 @@
       "$ref": "#/definitions/Microsoft.BeginDialog"
     },
     {
+      "$ref": "#/definitions/Microsoft.BeginPowerAutomate"
+    },
+    {
       "$ref": "#/definitions/Microsoft.BeginSkill"
     },
     {
@@ -986,6 +989,68 @@
           "type": "string",
           "pattern": "^[a-zA-Z][a-zA-Z0-9.]*$",
           "const": "Microsoft.BeginSkill"
+        },
+        "$designer": {
+          "title": "Designer information",
+          "type": "object",
+          "description": "Extra information for the Bot Framework Composer."
+        }
+      }
+    },
+    "Microsoft.BeginPowerAutomate": {
+      "$role": "implements(Microsoft.IDialog)",
+      "title": "Trigger a power automate flow",
+      "description": "Trigger a power automate flow.",
+      "type": "object",
+      "$package": {
+        "name": "Microsoft.Bot.Builder.Dialogs.Adaptive",
+        "version": "4.12.2"
+      },
+      "required": [
+        "$kind"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^\\$": {
+          "title": "Tooling property",
+          "description": "Open ended property for tooling."
+        }
+      },
+      "properties": {
+        "flowId": {
+          "type": "string",
+          "title": "FlowId",
+          "description": "Unique id for the power automate flow"
+        },
+        "parameters": {
+          "$ref": "#/definitions/objectExpression",
+          "title": "Parameters",
+          "description": "Parameters to pass in to the flow",
+          "examples": [
+            {
+              "arg1": "=expression"
+            }
+          ],
+          "additionalProperties": {
+            "type": "string",
+            "title": "Options",
+            "description": "Parameters to pass in to the flow."
+          }
+        },
+        "resultProperty": {
+          "$ref": "#/definitions/stringExpression",
+          "title": "Property",
+          "description": "Property to store the value that the power automate flow returns.",
+          "examples": [
+            "dialog.userName"
+          ]
+        },
+        "$kind": {
+          "title": "Kind of power automate object",
+          "description": "Defines the valid properties for the component you are configuring (from a dialog .schema file)",
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9.]*$",
+          "const": "Microsoft.BeginPowerAutomate"
         },
         "$designer": {
           "title": "Designer information",
@@ -3767,6 +3832,9 @@
         },
         {
           "$ref": "#/definitions/Microsoft.BeginDialog"
+        },
+        {
+          "$ref": "#/definitions/Microsoft.BeginPowerAutomate"
         },
         {
           "$ref": "#/definitions/Microsoft.BeginSkill"

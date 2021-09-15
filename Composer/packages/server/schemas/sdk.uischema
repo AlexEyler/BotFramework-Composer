@@ -136,6 +136,39 @@
       "subtitle": "Begin Dialog"
     }
   },
+  "Microsoft.BeginPowerAutomate": {
+    "flow": {
+      "body": {
+        "flow": "=action.flowId",
+        "widget": "PowerAutomateRef"
+      },
+      "footer": {
+        "description": "= Return value",
+        "property": "=action.resultProperty",
+        "widget": "PropertyDescription"
+      },
+      "hideFooter": "=!action.resultProperty",
+      "widget": "ActionCard"
+    },
+    "form": {
+      "helpLink": "https://aka.ms/bfc-understanding-dialogs",
+      "label": "Trigger a power automate flow",
+      "order": [
+        "flowId",
+        "parameters",
+        "resultProperty",
+        "*"
+      ],
+      "properties": {
+        "resultProperty": {
+          "intellisenseScopes": [
+            "variable-scopes"
+          ]
+        }
+      },
+      "subtitle": "Trigger power automate flow"
+    }
+  },
   "Microsoft.BeginSkill": {
     "flow": {
       "body": {

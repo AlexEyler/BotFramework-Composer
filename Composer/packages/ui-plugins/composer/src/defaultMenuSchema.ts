@@ -138,6 +138,10 @@ export const DefaultMenuSchema: MenuUISchema = {
     label: formatMessage('Connect to a skill'),
     submenu: [SubmenuNames.AccessExternalResources],
   },
+  [SDKKinds.BeginPowerAutomate]: {
+    label: formatMessage('Trigger a power automate flow'),
+    submenu: [SubmenuNames.AccessExternalResources],
+  },
   [SDKKinds.HttpRequest]: {
     label: formatMessage('Send an HTTP request'),
     submenu: [SubmenuNames.AccessExternalResources],

@@ -41,6 +41,7 @@
     "@bfc/ui-plugin-orchestrator": "*",
     "@bfc/ui-plugin-prompts": "*",
     "@bfc/ui-plugin-select-dialog": "*",
+    "@bfc/ui-plugin-select-flow": "*",
     "@bfc/ui-plugin-select-skill-dialog": "*",
     "@bfc/ui-shared": "*",
     "@botframework-composer/types": "*",

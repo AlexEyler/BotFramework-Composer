@@ -20,6 +20,7 @@ import question from './plugins/question';
 import setProperty from './plugins/setProperty';
 import propertyEditor from './plugins/propertyEditor';
 import headers from './plugins/headers';
+import selectFlow from './SelectFlow';
 
 const mergeArrays: MergeWithCustomizer = (objValue, srcValue, key) => {
   if (isArray(objValue)) {
@@ -46,6 +47,7 @@ export default mergePluginConfigs(
   composer,
   prompts,
   selectDialog,
+  selectFlow,
   selectSkillDialog,
   lg,
   lu,

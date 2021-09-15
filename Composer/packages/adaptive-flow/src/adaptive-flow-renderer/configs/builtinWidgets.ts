@@ -18,6 +18,7 @@ import {
   ActionHeader,
   PropertyDescription,
   ResourceOperation,
+  PowerAutomateRef,
 } from '../widgets';
 
 const builtinActionWidgets: FlowEditorWidgetMap = {
@@ -35,6 +36,7 @@ const builtinActionWidgets: FlowEditorWidgetMap = {
   PropertyDescription,
   ResourceOperation,
   ListOverview,
+  PowerAutomateRef,
 };
 
 export default builtinActionWidgets;

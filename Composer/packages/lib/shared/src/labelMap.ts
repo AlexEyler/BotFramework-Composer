@@ -245,6 +245,10 @@ export const conceptLabels: () => { [key in ConceptLabelKey]?: LabelOverride } =
     title: formatMessage('Connect to a skill'),
     description: formatMessage('Begin a remote skill dialog.'),
   },
+  [SDKKinds.BeginPowerAutomate]: {
+    title: formatMessage('Connect to a power automate flow'),
+    description: formatMessage('Begin a power automate flow.'),
+  },
   [SDKKinds.SwitchCondition]: {
     title: formatMessage('Branch: Switch (multiple options)'),
   },
