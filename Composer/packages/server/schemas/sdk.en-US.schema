@@ -366,6 +366,42 @@
                 }
             }
         },
+        "Microsoft.BeginPowerAutomate": {
+            "title": "Trigger a power automate flow",
+            "description": "Trigger a power automate flow.",
+            "patternProperties": {
+                "^\\$": {
+                    "title": "Tooling property",
+                    "description": "Open ended property for tooling."
+                }
+            },
+            "properties": {
+                "flowId": {
+                    "title": "FlowId",
+                    "description": "Unique id for the power automate flow"
+                },
+                "parameters": {
+                    "title": "Parameters",
+                    "description": "Parameters to pass in to the flow",
+                    "additionalProperties": {
+                        "title": "Options",
+                        "description": "Parameters to pass in to the flow."
+                    }
+                },
+                "resultProperty": {
+                    "title": "Property",
+                    "description": "Property to store the value that the power automate flow returns."
+                },
+                "$kind": {
+                    "title": "Kind of power automate object",
+                    "description": "Defines the valid properties for the component you are configuring (from a dialog .schema file)"
+                },
+                "$designer": {
+                    "title": "Designer information",
+                    "description": "Extra information for the Bot Framework Composer."
+                }
+            }
+        },
         "Microsoft.BreakLoop": {
             "title": "Break loop",
             "description": "Stop executing this loop",

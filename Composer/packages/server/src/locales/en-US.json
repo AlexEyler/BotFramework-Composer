@@ -554,6 +554,9 @@
   "begin_a_new_dialog_60249bd8": {
     "message": "Begin a new dialog"
   },
+  "begin_a_power_automate_flow_d391683d": {
+    "message": "Begin a power automate flow."
+  },
   "begin_a_remote_skill_dialog_93e47189": {
     "message": "Begin a remote skill dialog."
   },
@@ -907,6 +910,9 @@
   },
   "congratulations_your_model_is_successfully_publish_52ebc297": {
     "message": "Congratulations! Your model is successfully published."
+  },
+  "connect_to_a_power_automate_flow_ed647f7f": {
+    "message": "Connect to a power automate flow"
   },
   "connect_to_a_skill_53c9dff0": {
     "message": "Connect to a skill"
@@ -4079,6 +4085,9 @@
   "total_plural_1_stopping_bot_other_stopping_bots_ru_f6afe9bd": {
     "message": "{ total, plural,\n     =1 {Stopping bot..}\n  other {Stopping bots.. ({ running }/{ total } running)}\n}"
   },
+  "trigger_a_power_automate_flow_bd9048a3": {
+    "message": "Trigger a power automate flow"
+  },
   "trigger_f0ee1fbf": {
     "message": "Trigger"
   },
@@ -4096,6 +4105,9 @@
   },
   "trigger_phrases_f6754fa": {
     "message": "Trigger phrases"
+  },
+  "trigger_power_automate_flow_8be7d0b9": {
+    "message": "Trigger power automate flow"
   },
   "triggers_are_the_main_component_of_a_dialog_they_a_ff243c17": {
     "message": "Triggers are the main component of a dialog, they are how you catch and respond to events. Each trigger has a condition and a collection of actions to execute when the condition is met."

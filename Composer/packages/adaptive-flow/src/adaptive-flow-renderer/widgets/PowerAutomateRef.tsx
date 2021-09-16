@@ -4,16 +4,16 @@
 /** @jsx jsx */
 import { WidgetComponent, WidgetContainerProps } from '@bfc/extension-client';
 import { jsx } from '@emotion/core';
-import React from 'react';
+import React, { useMemo } from 'react';
 
-export interface PowerAutomateRefProps extends WidgetContainerProps {
-  flow: string;
-}
+export const PowerAutomateRef: WidgetComponent<WidgetContainerProps> = ({ id, onEvent, data }) => {
+  const content = useMemo(() => {
+    return data.flowId;
+  }, [data.flowId]);
 
-export const PowerAutomateRef: WidgetComponent<PowerAutomateRefProps> = ({ id, onEvent, data }) => {
   return (
     <div>
-      <span>Hello world</span>
+      <span>{content}</span>
     </div>
   );
 };

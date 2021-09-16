@@ -39,6 +39,17 @@
             "subtitle": "Begin Dialog"
         }
     },
+    "Microsoft.BeginPowerAutomate": {
+        "flow": {
+            "footer": {
+                "description": "= Return value"
+            }
+        },
+        "form": {
+            "label": "Trigger a power automate flow",
+            "subtitle": "Trigger power automate flow"
+        }
+    },
     "Microsoft.BeginSkill": {
         "flow": {
             "footer": {
