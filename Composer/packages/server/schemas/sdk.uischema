@@ -139,7 +139,7 @@
   "Microsoft.BeginPowerAutomate": {
     "flow": {
       "body": {
-        "flow": "=action.flowId",
+        "flow": "=action.flow",
         "widget": "PowerAutomateRef"
       },
       "footer": {
@@ -154,7 +154,7 @@
       "helpLink": "https://aka.ms/bfc-understanding-dialogs",
       "label": "Trigger a power automate flow",
       "order": [
-        "flowId",
+        "flow",
         "parameters",
         "resultProperty",
         "*"

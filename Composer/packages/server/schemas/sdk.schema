@@ -1017,10 +1017,10 @@
         }
       },
       "properties": {
-        "flowId": {
-          "type": "string",
-          "title": "FlowId",
-          "description": "Unique id for the power automate flow"
+        "flow": {
+          "type": "object",
+          "title": "Flow",
+          "description": "Flow metadata (id, display name, etc.)"
         },
         "parameters": {
           "$ref": "#/definitions/objectExpression",

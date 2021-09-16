@@ -20,7 +20,7 @@ export interface PowerAutomateFlowVariable {
 }
 
 export interface PowerAutomateFlow {
-  flowId: string;
+  id: string;
   displayName: string;
   inputProperties?: PowerAutomateFlowVariable[] | undefined;
   outputProperties?: PowerAutomateFlowVariable[] | undefined;
@@ -35,17 +35,17 @@ export const SelectFlow: React.FC<FieldProps> = (props) => {
   const { onChange } = props;
   const flows: PowerAutomateFlow[] = [
     {
-      flowId: 'abcdefg',
+      id: 'abcdefg',
       displayName: 'Test Flow #1',
     },
     {
-      flowId: 'hijklmno',
+      id: 'hijklmno',
       displayName: 'Test Flow #2',
     },
   ];
   const handleChange = (item?: IContextualMenuItem) => {
     if (item) {
-      onChange(item.key);
+      onChange(item.data);
     } else {
       onChange(null);
     }
@@ -96,7 +96,7 @@ export const SelectFlowMenu: React.FC<SelectFlowMenuProps> = (props) => {
 
   const allItems: IContextualMenuItem[] = useMemo(() => {
     return flows.map((f) => ({
-      key: f.flowId,
+      key: f.id,
       text: f.displayName,
       isSelected: value === f.displayName,
       data: f,
@@ -118,7 +118,7 @@ export const SelectFlowMenu: React.FC<SelectFlowMenuProps> = (props) => {
   );
 
   const selectedLabel = useMemo(() => {
-    const selected = allItems.find((i) => i.key === value);
+    const selected = allItems.find((i) => i.key === value.id);
     return selected?.text;
   }, [items, value]);
 
@@ -166,7 +166,7 @@ export default {
     [SDKKinds.BeginPowerAutomate]: {
       form: {
         properties: {
-          flowId: {
+          flow: {
             field: SelectFlow,
           },
         },
