@@ -155,7 +155,7 @@
       "label": "Trigger a power automate flow",
       "order": [
         "flow",
-        "parameters",
+        "inputParameters",
         "resultProperty",
         "*"
       ],

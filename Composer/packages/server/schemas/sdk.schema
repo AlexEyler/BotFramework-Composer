@@ -1022,13 +1022,13 @@
           "title": "Flow",
           "description": "Flow metadata (id, display name, etc.)"
         },
-        "parameters": {
+        "inputParameters": {
           "type": "object",
-          "title": "Parameters",
+          "title": "Input Parameters",
           "description": "Parameters to pass in to the flow",
           "additionalProperties": {
             "type": "string",
-            "title": "Parameters",
+            "title": "Input Parameters",
             "description": "Parameters to pass in to the flow."
           }
         },

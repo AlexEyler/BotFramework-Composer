@@ -14,7 +14,7 @@ export default {
           flow: {
             field: SelectFlow,
           },
-          parameters: {
+          inputParameters: {
             additionalField: true,
             field: PowerAutomateParameterField,
             label: 'Input parameters to the flow',

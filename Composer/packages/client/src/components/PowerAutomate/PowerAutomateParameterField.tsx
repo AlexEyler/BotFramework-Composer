@@ -1,13 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { IntellisenseExpressionField, resolveFieldWidget, SchemaField, WithTypeIcons } from '@bfc/adaptive-form';
+import { SchemaField } from '@bfc/adaptive-form';
 import { FieldProps, JSONSchema7, UIOptions } from '@bfc/extension-client';
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 
 import { PowerAutomateFlow } from './PowerAutomateFlow';
-
-const IntellisenseExpressionFieldWithIcon = WithTypeIcons(IntellisenseExpressionField);
 
 const toExpressionVariableRef = (variableType: string) => {
   switch (variableType) {
@@ -27,7 +25,7 @@ interface PowerAutomateParameterFieldProps extends FieldProps {
 }
 
 const PowerAutomateParameterFieldMenu: React.FC<PowerAutomateParameterFieldProps> = (props) => {
-  const { definitions, id, flow, onChange, uiOptions, schema, value } = props;
+  const { definitions, id, flow, onChange, value } = props;
 
   const properties = useMemo(() => {
     return flow?.inputProperties;
@@ -48,10 +46,10 @@ const PowerAutomateParameterFieldMenu: React.FC<PowerAutomateParameterFieldProps
         };
         const change = (item: string) => {
           const newParameters = {
-            ...value.parameters,
+            ...value.inputParameters,
             [p.name]: item,
           };
-          onChange({ ...value, parameters: newParameters });
+          onChange({ ...value, inputParameters: newParameters });
         };
         return (
           <SchemaField
@@ -61,7 +59,7 @@ const PowerAutomateParameterFieldMenu: React.FC<PowerAutomateParameterFieldProps
             name={p.name}
             schema={propSchema}
             uiOptions={propUiOptions}
-            value={value.parameters ? value.parameters[p.name] ?? '' : ''}
+            value={value.inputParameters ? value.inputParameters[p.name] ?? '' : ''}
             onChange={change}
           />
         );

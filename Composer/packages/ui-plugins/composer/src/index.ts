@@ -52,7 +52,7 @@ const DefaultFormSchema: FormUISchema = {
     label: () => formatMessage('Trigger a power automate flow'),
     subtitle: () => formatMessage('Trigger power automate flow'),
     helpLink: 'https://aka.ms/bfc-understanding-dialogs',
-    order: ['flow', 'parameters', 'resultProperty', '*'],
+    order: ['flow', 'inputParameters', 'resultProperty', '*'],
   },
   [SDKKinds.OnCancelDialog]: {
     label: () => formatMessage('Dialog cancelled'),

@@ -380,13 +380,15 @@
                     "title": "Flow",
                     "description": "Flow metadata (id, display name, etc.)"
                 },
-                "parameters": {
-                    "title": "Parameters",
-                    "description": "Parameters to pass in to the flow",
-                    "additionalProperties": {
-                        "title": "Options",
-                        "description": "Parameters to pass in to the flow."
-                    }
+                "inputParameters": {
+                  "type": "object",
+                  "title": "Input Parameters",
+                  "description": "Parameters to pass in to the flow",
+                  "additionalProperties": {
+                    "type": "string",
+                    "title": "Input Parameters",
+                    "description": "Parameters to pass in to the flow."
+                  }
                 },
                 "resultProperty": {
                     "title": "Property",
