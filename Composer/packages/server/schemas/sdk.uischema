@@ -142,12 +142,6 @@
         "flow": "=action.flow",
         "widget": "PowerAutomateRef"
       },
-      "footer": {
-        "description": "= Return value",
-        "property": "=action.resultProperty",
-        "widget": "PropertyDescription"
-      },
-      "hideFooter": "=!action.resultProperty",
       "widget": "ActionCard"
     },
     "form": {
@@ -156,11 +150,11 @@
       "order": [
         "flow",
         "inputParameters",
-        "resultProperty",
+        "outputProperties",
         "*"
       ],
       "properties": {
-        "resultProperty": {
+        "outputProperties": {
           "intellisenseScopes": [
             "variable-scopes"
           ]

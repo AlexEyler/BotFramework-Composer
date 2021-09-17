@@ -25,10 +25,16 @@ interface PowerAutomateParameterFieldProps extends FieldProps {
 }
 
 const PowerAutomateParameterFieldMenu: React.FC<PowerAutomateParameterFieldProps> = (props) => {
-  const { definitions, id, flow, onChange, value } = props;
+  const { definitions, id, flow, onChange, value, uiOptions } = props;
+
+  const isInput = uiOptions.properties?.input ?? true;
 
   const properties = useMemo(() => {
-    return flow?.inputProperties;
+    if (isInput) {
+      return flow?.inputProperties;
+    }
+
+    return flow?.outputProperties;
   }, [flow]);
 
   if (!properties) {
@@ -45,21 +51,37 @@ const PowerAutomateParameterFieldMenu: React.FC<PowerAutomateParameterFieldProps
           label: p.name,
         };
         const change = (item: string) => {
-          const newParameters = {
-            ...value.inputParameters,
-            [p.name]: item,
-          };
-          onChange({ ...value, inputParameters: newParameters });
+          if (isInput) {
+            const newParameters = {
+              ...value.inputParameters,
+              [p.name]: item,
+            };
+            onChange({ ...value, inputParameters: newParameters });
+          } else {
+            const newOutputProperties = {
+              ...value.outputProperties,
+              [p.name]: item,
+            };
+            onChange({ ...value, outputProperties: newOutputProperties });
+          }
+        };
+        const getValue = () => {
+          if (isInput) {
+            return value.inputParameters ? value.inputParameters[p.name] ?? '' : '';
+          } else {
+            return value.outputProperties ? value.outputProperties[p.name] ?? '' : '';
+          }
         };
         return (
           <SchemaField
             key={p.name}
+            required
             definitions={definitions}
             id={`${id}_${i}`}
             name={p.name}
             schema={propSchema}
             uiOptions={propUiOptions}
-            value={value.inputParameters ? value.inputParameters[p.name] ?? '' : ''}
+            value={getValue()}
             onChange={change}
           />
         );

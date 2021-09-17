@@ -1032,13 +1032,10 @@
             "description": "Parameters to pass in to the flow."
           }
         },
-        "resultProperty": {
-          "$ref": "#/definitions/stringExpression",
-          "title": "Property",
-          "description": "Property to store the value that the power automate flow returns.",
-          "examples": [
-            "dialog.userName"
-          ]
+        "outputProperties": {
+          "type": "object",
+          "title": "Output Properties",
+          "description": "Properties to store the value(s) that the power automate flow returns."
         },
         "$kind": {
           "title": "Kind of power automate object",

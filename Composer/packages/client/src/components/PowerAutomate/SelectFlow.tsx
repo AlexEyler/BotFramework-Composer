@@ -108,6 +108,12 @@ export const SelectFlow: React.FC<FieldProps> = (props) => {
           valueType: 'number',
         },
       ],
+      outputProperties: [
+        {
+          name: 'outputProperty1',
+          valueType: 'boolean',
+        },
+      ],
     },
     {
       id: 'hijklmno',

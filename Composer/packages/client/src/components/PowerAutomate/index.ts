@@ -18,6 +18,17 @@ export default {
             additionalField: true,
             field: PowerAutomateParameterField,
             label: 'Input parameters to the flow',
+            properties: {
+              input: true,
+            },
+          },
+          outputProperties: {
+            additionalField: true,
+            field: PowerAutomateParameterField,
+            label: 'Output properties to store flow return values',
+            properties: {
+              input: false,
+            },
           },
         },
       },
