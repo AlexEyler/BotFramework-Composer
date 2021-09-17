@@ -4,6 +4,7 @@
 import { SDKKinds } from '@botframework-composer/types';
 
 import { SelectFlow } from './SelectFlow';
+import { PowerAutomateParameterField } from './PowerAutomateParameterField';
 
 export default {
   uiSchema: {
@@ -12,6 +13,11 @@ export default {
         properties: {
           flow: {
             field: SelectFlow,
+          },
+          parameters: {
+            additionalField: true,
+            field: PowerAutomateParameterField,
+            label: 'Input parameters to the flow',
           },
         },
       },

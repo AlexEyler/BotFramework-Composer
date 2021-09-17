@@ -97,6 +97,15 @@ export const SelectFlow: React.FC<FieldProps> = (props) => {
       inputProperties: [
         {
           name: 'inputProperty1',
+          valueType: 'string',
+        },
+        {
+          name: 'inputProperty2',
+          valueType: 'boolean',
+        },
+        {
+          name: 'inputProperty3',
+          valueType: 'number',
         },
       ],
     },

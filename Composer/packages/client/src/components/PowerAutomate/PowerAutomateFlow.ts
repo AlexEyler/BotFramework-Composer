@@ -3,7 +3,7 @@
 
 export interface PowerAutomateFlowVariable {
   name: string;
-  value?: string | number | boolean | undefined;
+  valueType: 'string' | 'number' | 'boolean';
 }
 
 export interface PowerAutomateFlow {

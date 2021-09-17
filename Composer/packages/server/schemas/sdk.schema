@@ -1023,17 +1023,12 @@
           "description": "Flow metadata (id, display name, etc.)"
         },
         "parameters": {
-          "$ref": "#/definitions/objectExpression",
+          "type": "object",
           "title": "Parameters",
           "description": "Parameters to pass in to the flow",
-          "examples": [
-            {
-              "arg1": "=expression"
-            }
-          ],
           "additionalProperties": {
             "type": "string",
-            "title": "Options",
+            "title": "Parameters",
             "description": "Parameters to pass in to the flow."
           }
         },

@@ -8,7 +8,7 @@ import React, { useMemo } from 'react';
 
 export const PowerAutomateRef: WidgetComponent<WidgetContainerProps> = ({ id, onEvent, data }) => {
   const content = useMemo(() => {
-    return data.flow.displayName;
+    return data.flow?.displayName ?? ' ';
   }, [data.flow]);
 
   return (
